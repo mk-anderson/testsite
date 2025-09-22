@@ -65,7 +65,7 @@ HamadxHP's Source Code
 
 2.テーマ testtheme を配置して有効化、wp-config.php で WP_DEBUG を true
 
-3.Node v18+ を用意
+3.WP 6.x、PHP 8.1+、Node 18+、Vite、SCSS(FLOCSS) を用意
 
 4.テーマ直下で：
 
