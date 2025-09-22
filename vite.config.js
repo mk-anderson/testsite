@@ -5,7 +5,7 @@ export default defineConfig(({ mode }) => ({
   root: '.',
   base: mode === 'development'
     ? '/' 
-    : '/wp-content/themes/mytheme/dist/',
+    : '/wp-content/themes/testtheme/dist/',
   build: {
     outDir: 'dist',
     emptyOutDir: true,
