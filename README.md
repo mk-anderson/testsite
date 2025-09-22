@@ -60,7 +60,26 @@ HamadxHP's Source Code
 ```
 
 ## 開発環境構築
+
+1.Local で WP サイト（例：http://testsite.local/）を起動
+
+2.テーマ testtheme を配置して有効化、wp-config.php で WP_DEBUG を true
+
+3.Node v18+ を用意
+
+4.テーマ直下で：
+
+```
+git clone ...
+npm install
+npm run start   # Vite起動 + WP URL自動オープン
+```
+
+5.（必要なら）PHP変更の自動リロード：vite-plugin-full-reload を導入
+
+6.トラブル時は FAQ を参照（CORS / type="module" / ポート / HTTPS など）
+
 ```bash
 git clone ...
 npm install
-npm run dev
+npm run start
