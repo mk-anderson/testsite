@@ -35,3 +35,10 @@ add_action('wp_enqueue_scripts', function () {
     }
   }
 }, 20);
+
+add_filter('script_loader_tag', function ($tag, $handle) {
+  if (in_array($handle, ['vite-client', 'theme-main'], true)) {
+    $tag = str_replace('<script ', '<script type="module" ', $tag);
+  }
+  return $tag;
+}, 9999, 2); // ← 高優先度で確実に上書き
