@@ -13,7 +13,9 @@ add_action('wp_enqueue_scripts', function () {
   if ( defined('WP_DEBUG') && WP_DEBUG ) {
     // LocalのURLが https の場合、必要に応じて Vite を https/wss に合わせる
     wp_enqueue_script('vite-client', 'http://localhost:5173/@vite/client', [], null, true);
+    wp_script_add_data('vite-client', 'type', 'module'); // ★これが重要
     wp_enqueue_script('theme-main', 'http://localhost:5173/assets/js/main.js', [], null, true);
+    wp_script_add_data('theme-main', 'type', 'module');  // ★これが重要
   } else {
     $manifest_path = get_stylesheet_directory() . '/dist/manifest.json';
     if ( file_exists($manifest_path) ) {
