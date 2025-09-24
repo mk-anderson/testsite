@@ -1,0 +1,25 @@
+/* assets/scss/main.scss */
+
+/* Foundation */
+@use 'foundation/reset.scss';
+@use 'foundation/variables.tokens.scss' as *;
+@use 'foundation/variables.maps.scss' as *;
+@use 'foundation/mixins.media.scss' as media;
+@use 'foundation/base.scss';
+
+/* Layout */
+@use 'layout/container.scss';
+@use 'layout/grid.scss';
+
+/* Object - Components */
+@use 'object/component/button.scss';
+@use 'object/component/card.scss';
+
+/* Object - Project */
+@use 'object/project/header.scss';
+@use 'object/project/home-hero.scss';
+
+/* Object - Utility */
+@use 'object/utility/spacing.scss';
+@use 'object/utility/visibility.scss';
+@use 'object/utility/text.scss';
