@@ -24,12 +24,13 @@ add_action('wp_enqueue_scripts', function () {
 
       if ($entry) {
         if (!empty($entry['css'])) {
-          foreach ($entry['css'] as $css) {
-            wp_enqueue_style('theme-main', mytheme_asset_url($css), [], null);
+          foreach ($entry['css'] as $i => $css) {
+            wp_enqueue_style('theme-main' . ($i ?: ''), mytheme_asset_url($css), [], null);
           }
         }
         if (!empty($entry['file'])) {
           wp_enqueue_script('theme-main', mytheme_asset_url($entry['file']), [], null, true);
+          wq_script_add_data('theme-main', 'type', 'module');
         }
       }
     }
