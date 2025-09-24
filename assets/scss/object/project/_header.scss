@@ -5,3 +5,10 @@
   &__inner { @extend .l-container; display: flex; align-items: center; height: 64px; }
   &__logo { font-weight: 700; }
 }
+
+.p-header--top {
+  background: #2563eb;
+  color: #fff;
+
+  .p-header__logo a { color: #fff; }
+}
