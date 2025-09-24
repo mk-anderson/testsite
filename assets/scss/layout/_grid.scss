@@ -1,0 +1,11 @@
+@use '../foundation/mixins.media' as media;
+
+.l-grid {
+  display: grid;
+  gap: var(--sp-24);
+
+  &--cols-3 {
+    grid-template-columns: 1fr;
+    @include media.mq('md') { grid-template-columns: repeat(3, 1fr); }
+  }
+}

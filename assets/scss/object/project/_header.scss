@@ -1,0 +1,7 @@
+.p-header {
+  position: sticky; top: 0; z-index: var(--z-header);
+  background: #fff; border-bottom: 1px solid var(--c-border);
+
+  &__inner { @extend .l-container; display: flex; align-items: center; height: 64px; }
+  &__logo { font-weight: 700; }
+}

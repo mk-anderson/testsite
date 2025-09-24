@@ -1,0 +1,33 @@
+/* カラートークン */
+:root {
+  --c-bg: #ffffff;
+  --c-text: #1b1f23;
+  --c-primary: #2563eb;
+  --c-primary-700: #1d4ed8;
+  --c-border: #e5e7eb;
+}
+
+/* フォント/サイズ */
+:root {
+  --ff-sans: 'Noto Sans JP', system-ui, -apple-system, sans-serif;
+  --fs-base: 16px;
+  --lh-base: 1.7;
+}
+
+/* スペーシングスケール（4の倍数推奨） */
+:root {
+  --sp-4: 4px;
+  --sp-8: 8px;
+  --sp-12: 12px;
+  --sp-16: 16px;
+  --sp-24: 24px;
+  --sp-32: 32px;
+  --sp-48: 48px;
+}
+
+/* コンテナ幅・z-index */
+:root {
+  --container-max: 1120px;
+  --z-header: 1000;
+  --z-modal: 1100;
+}

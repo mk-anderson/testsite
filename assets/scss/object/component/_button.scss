@@ -1,0 +1,25 @@
+.c-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-8);
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--c-border);
+  background: #fff;
+  color: var(--c-text);
+  cursor: pointer;
+  transition: .2s ease-in-out;
+
+  &--primary {
+    background: var(--c-primary);
+    border-color: var(--c-primary);
+    color: #fff;
+
+    &:hover { background: var(--c-primary-700); }
+  }
+
+  &--ghost {
+    background: transparent;
+  }
+}

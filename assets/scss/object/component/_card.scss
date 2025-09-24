@@ -1,0 +1,10 @@
+.c-card {
+  border: 1px solid var(--c-border);
+  border-radius: 12px;
+  padding: var(--sp-16);
+  background: #fff;
+
+  &__title { font-weight: 700; margin-bottom: var(--sp-8); }
+  &__meta { color: #666; font-size: 0.875rem; margin-bottom: var(--sp-12); }
+  &__body { color: var(--c-text); }
+}

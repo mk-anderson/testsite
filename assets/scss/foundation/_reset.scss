@@ -1,0 +1,14 @@
+/* 最小限のreset */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--c-bg);
+  color: var(--c-text);
+  font-family: var(--ff-sans);
+  font-size: var(--fs-base);
+  line-height: var(--lh-base);
+}
+img { max-width: 100%; height: auto; display: block; }

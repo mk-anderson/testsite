@@ -1,0 +1,9 @@
+@use 'variables.maps' as *;
+
+@function bp($key) {
+  @return map-get($breakpoints, $key);
+}
+
+@mixin mq($from) {
+  @media (min-width: bp($from)) { @content; }
+}
