@@ -4,12 +4,24 @@
     "build": "vite build",
     "preview": "vite preview",
     "dev:open": "start http://testsite.local/",
-    "start": "npm-run-all -p dev dev:open"
+    "start": "npm-run-all -p dev dev:open",
+    "build:css": "postcss assets/scss/style.css -o assets/css/style.css",
+    "watch:css": "postcss assets/scss/style.css -o assets/css/style.css --watch"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.21",
     "npm-run-all": "^4.1.5",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
     "sass": "^1.93.0",
     "vite": "^7.1.6",
     "vite-plugin-full-reload": "^1.2.0"
-  }
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
