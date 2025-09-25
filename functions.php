@@ -44,8 +44,8 @@ add_action('wp_enqueue_scripts', function () {
           wp_set_script_translations(
             'theme-main',
             'testtheme',
-            mytheme_asset_url() . '/languages'
-            //get_stylesheet_directory() . '/languages'
+            //mytheme_asset_url() . '/languages'
+            get_stylesheet_directory() . '/languages'
           );
         }
       }
@@ -94,3 +94,4 @@ function create_post_type() {
         'taxonomies' => array('category', 'news-tag'),
     )
 );
+}
