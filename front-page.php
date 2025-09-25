@@ -1,7 +1,8 @@
 <?php
 // front-page.php : トップページ専用テンプレート
 
-get_header('top'); // ← header-top.php を呼び出す
+//get_header('top'); // ← header-top.php を呼び出す
+get_header();  //header.phpを呼び出す
 ?>
 
 <main class="p-home">

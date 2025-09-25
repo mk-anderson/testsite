@@ -11,4 +11,30 @@
 <body <?php body_class(); ?>>
 <header class="l-header">
   <a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
+  <div>
+    <h2>濱田屋グループ&emsp;HAMADAYA&nbsp;GROUP</h2>
+    <ul> 
+      <li>
+        <a href="<?php echo home_url(); ?>">
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/img-hama_logo.png" alt="Hamadayashoten" class="">
+      </a></li>
+      <li>
+        <a href="<?php echo home_url(); ?>">
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/img-hmx_logo.png" alt="Hamax" class="">
+      </a>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <ul>
+      <li>日本語<a href="#"></a></li>
+      <li>|</li>
+      <li>English<a href="#"></a></li>
+    </ul>
+    <nav>
+      <ul>
+        <li></li>
+      </ul>
+    </nav>
+  </div>
 </header>
