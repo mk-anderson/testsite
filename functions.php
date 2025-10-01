@@ -93,5 +93,36 @@ function create_post_type() {
         ),
         'taxonomies' => array('category', 'news-tag'),
     )
-);
+  );
 }
+
+//menuカスタマイズ
+
+// ① メニューの場所を登録（after_setup_theme で）
+add_action('after_setup_theme', function () {
+  register_nav_menus([
+    'gmenu' => __('メインメニュー', 'testtheme'),
+  ]);
+});
+
+// Walker は関数の外（グローバル）に定義済みとして
+class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
+  public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+    if ( is_array($args) ) $args = (object) $args; // 念のため
+    if ( isset($item->url) && $item->url === '#contact' ) {
+      $item->url = home_url('/#contact');
+    }
+    parent::start_el($output, $item, $depth, $args, $id);
+  }
+}
+
+// gmenu 用のデフォルト引数を注入
+add_filter('wp_nav_menu_args', function ($args) {
+  if (isset($args['theme_location']) && $args['theme_location'] === 'gmenu') {
+    $args['container']   = false;
+    $args['menu_class']  = 'global-nav';
+    $args['fallback_cb'] = '__return_false';
+    $args['walker']      = new Custom_Walker_Nav_Menu();
+  }
+  return $args;
+}, 10);

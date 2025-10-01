@@ -33,7 +33,9 @@
     </ul>
     <nav>
       <ul>
-        <li></li>
+        <li>
+          <?php wp_nav_menu(['theme_location' => 'gmenu']); ?>
+        </li>
       </ul>
     </nav>
   </div>
