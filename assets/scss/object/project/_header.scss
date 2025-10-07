@@ -12,3 +12,32 @@
 
   .p-header__logo a { color: #fff; }
 }
+
+.p-header_col {
+    display:flex;
+    list-style: none;
+}
+
+
+
+
+//nav-menuについてのstyling
+.global-nav {
+  display:flex;
+  list-style: none;
+}
+
+.menu-item{
+  &-15 {
+    margin-left: 10px;
+  }
+  &-16 {
+    margin-left: 10px;
+  }
+  &-17 {
+    margin-left: 10px;
+  }
+  &-18 {
+    margin-left: 10px;
+  }
+}
