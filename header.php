@@ -12,7 +12,7 @@
 <header class="l-header p-header_col">
   <a href="<?/*php echo esc_url(home_url('/')); */?>"><?/*php bloginfo('name'); */?></a>
   <div class="u-w550">
-    <h2 class="u-px10p u-mb0 u-mt5">濱田屋グループ&emsp;HAMADAYA&nbsp;GROUP</h2>
+    <h2 class="u-px10p u-mb0 u-mt5 u-text-fntfam1">濱田屋グループ&emsp;<span class="u-text-size18">HAMADAYA&nbsp;GROUP</span></h2>
     <ul class="p-header_col u-px10 u-mt0"> 
       <li>
         <a href="<?php echo home_url(); ?>">
@@ -25,8 +25,8 @@
       </li>
     </ul>
   </div>
-  <div>
-    <ul class="p-header_col">
+  <div class="u-mla u-mr15 u-text-fntfam1 u-text-fntweit600">
+    <ul class="p-header_col u-jstfcnt-e">
       <li>日本語<a href="#"></a></li>
       <li>|</li>
       <li>English<a href="#"></a></li>
