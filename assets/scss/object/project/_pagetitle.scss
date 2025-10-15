@@ -1,0 +1,12 @@
+@use '../../foundation/mixins.media' as media;
+
+.p-pagetitle {
+  display: flex;
+  width: 1920px;
+  height: 375px;
+
+  //@include media.mq('md') {
+  //  padding: 64px 0;
+  //  &__title { font-size: 2.5rem; }
+  //}
+}
