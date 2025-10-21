@@ -1,6 +1,9 @@
 .p-header {
   //position: sticky; top: 0; z-index: var(--z-header);
-  background: #fff; border-bottom: 1px solid var(--c-border);
+  //background: #fff; border-bottom: 1px solid var(--c-border);
+  position: relative;
+  z-index: 9999;
+  background-color: white;
 
   //&__inner { @extend .l-container; display: flex; align-items: center; height: 64px; }
   &__logo { font-weight: 700; }
@@ -26,6 +29,59 @@
   display:flex;
   list-style: none;
 }
+
+/* デフォルト（デスクトップ） */
+.hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+.hamburger .bar {
+  display: block;
+  width: 22px;
+  height: 3px;
+  margin: 4px 0;
+  background: #333;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* メニューの基本スタイル（横並び） */
+.global-nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.global-nav li {
+  /* 既存の spacing を保つ場合は適宜調整 */
+  margin-left: 0; /* 必要に応じて調整 */
+}
+
+/* 875px 以下でのモバイル表示切替 */
+@media (max-width: 875px) {
+  .hamburger {
+    display: inline-flex;
+  }
+
+  .global-nav {
+    display: none;          /* 初期は非表示 */
+    flex-direction: column; /* 縦メニューにする */
+    width: 100%;
+    background: #fff;       /* 必要に応じてデザインを調整 */
+  }
+
+  .global-nav.open {
+    display: flex;            /* 開いたときに表示 */
+  }
+
+  .global-nav li {
+    width: 100%;
+    /* 必要に応じて padding/margin を調整 */
+  }
+}
+
 
 .menu-item{
   &-15 {

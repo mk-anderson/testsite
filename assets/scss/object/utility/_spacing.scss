@@ -2,6 +2,7 @@
 .u-mt5 { margin-top: 5px; }
 .u-mt8 { margin-top: var(--sp-8) !important; }
 .u-mt16 { margin-top: var(--sp-16) !important; }
+.u-mtn120 { margin-top: -120px; }
 .u-mb0 { margin-bottom: 0px; }
 .u-mb16 { margin-bottom: var(--sp-16) !important; }
 .u-mb24 { margin-bottom: var(--sp-24) !important; }
@@ -15,3 +16,6 @@
 .u-px10 { padding-inline: 10px; }
 
 .u-jstfcnt-e { justify-content: end; }
+
+.u-posi-re { position: relative; }
+.u-posi-ab { position: absolute; }

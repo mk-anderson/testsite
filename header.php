@@ -9,7 +9,7 @@
 <!--<script type="module" src="http://localhost:5173/assets/js/main.js"></script>-->
 </head>
 <body <?php body_class(); ?>>
-<header class="l-header p-header_col">
+<header class="l-header p-header p-header_col">
   <a href="<?/*php echo esc_url(home_url('/')); */?>"><?/*php bloginfo('name'); */?></a>
   <div class="u-w550">
     <h2 class="u-px10p u-mb0 u-mt5 u-text-fntfam1">濱田屋グループ&emsp;<span class="u-text-size18">HAMADAYA&nbsp;GROUP</span></h2>
@@ -32,7 +32,17 @@
       <li>English<a href="#"></a></li>
     </ul>
     <nav>
-      <?php wp_nav_menu(['theme_location' => 'gmenu']); ?>
+      <button class="hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="gmenu" type="button">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <?php 
+      wp_nav_menu([
+        'theme_location' => 'gmenu',
+        'menu_id'      => 'gmenu',
+        'menu_class'   => 'global-nav',
+        'container'    => false, // <nav> の中に直接 ul を出力
+      ]); 
+      ?>
     </nav>
   </div>
 </header>
